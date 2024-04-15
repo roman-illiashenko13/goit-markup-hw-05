@@ -548,16 +548,26 @@ section {
   background-color: transparent;
   padding-left: 16px;
   padding-right: 16px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
 }
 
 .footer-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -571,6 +581,7 @@ section {
 }
 
 .subscribe-img {
+  margin-left: 16px;
 }
 
 .backdrop {
@@ -582,6 +593,8 @@ section {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -600,12 +613,39 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.icon-close-btn {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -648,7 +688,7 @@ section {
 .modal-label {
   display: block;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -662,6 +702,10 @@ section {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-field-comment {
+  margin-bottom: 16px;
+}
+
 .modal-text {
   width: 100%;
   height: 120px;
@@ -672,6 +716,14 @@ section {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
   padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-text:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-text::placeholder {
@@ -683,7 +735,7 @@ section {
 
 .check-text {
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
@@ -691,15 +743,7 @@ section {
   margin-bottom: 24px;
 }
 
-.check-text span {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
+.check-text {
 }
 
 .modal-check:checked + .check-text span {
@@ -708,11 +752,29 @@ section {
   fill: #f4f4fd;
 }
 
+.modal-field-checkbx {
+  margin-bottom: 24px;
+}
+
 .privacy-policy {
   line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+}
+
+.privacy-text {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
 .send-btn {
