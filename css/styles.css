@@ -742,10 +742,8 @@ section {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: flex;
   align-items: center;
   margin-bottom: 24px;
-  gap: 8px;
 }
 
 .check-text span {
