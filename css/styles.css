@@ -522,9 +522,7 @@ section {
 }
 
 .footer-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-left: 80px;
 }
 
 .subscribe-title {
